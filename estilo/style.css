@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+:root{
+--cor0: #480058;
+--cor1: #781C8C;
+--cor2: #AA4DBF;
+--cor3: #E091F2;
+--cor4: #F6CCFF;
+--cor5: #f3e5f7;
+
+--fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+--fonte-destaque: 'Bebas Neue', cursive;
+--fonte-androide: 'Android', cursive;
+
+}
+
+*{ /* O '*' serve para formata todo um texto: nesse caso ele tira toda margem. */
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--cor5);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after{   /* foi criado uma class para adicionar o icone aos links */
+    content: '\1F517';
+}
+
+header {
+    background-image: linear-gradient(to top, var(--cor2), var(--cor0));
+    background-color: var(--cor1);  /* cor de fundo */
+    min-height: 150px;              /* altura minima */
+    text-align: center;             /* centralizar o texto */
+    padding-top: 40px;
+    padding-bottom: 1px;              /* margem do topo do cabeçalho */
+
+
+}
+
+header > h1 {
+    
+    color: var(--cor5);
+    font-family: var(--fonte-destaque);
+    font-size: 3em;                  /* tamanho da fonte */
+    font-weight: normal;
+    margin-bottom: 20px;
+    
+    text-shadow: 2px 2px 0px black;
+
+ 
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: var(--cor5);
+    max-width: 600px;               
+    padding-right: 10px;            /* margem da caixa a direita */
+    padding-left: 10px;
+    padding-bottom: 10px;    
+    margin: auto;                   /* margem automatica para centralizar caixa */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.342);
+
+}
+
+nav{
+    background-color: var(--cor2);
+    padding: 10px;
+    box-shadow: 1px 7px 7px 0px #00000059;
+    
+}
+
+nav > a {
+    color: var(--cor4);
+    padding: 10px;                  /* espaçamento entre */
+    text-decoration: none;          /* retira as sublinhas das palavras */
+    font-weight: bold;              /* negrito nas palavras */
+    transition-duration: 1s;        /* duração de transição ao selecionar a caixa  */
+}
+
+nav > a:hover {                     /* mudar a cor da caixa de senleção do menu nav */
+    background-color: var(--cor1);  /* cor de fundo */
+    color: var(--cor5);             /* cor da fonte */
+    border-radius: 3px;             /* borda das caixas */
+}
+
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.486);
+    border-bottom-left-radius: 10px;    /* arrendondar somente a borda de baixo a esquerda */
+    border-bottom-right-radius: 10px;   /* arrendondar somente a borda a de baixo a direita */
+
+}
+
+main h1{
+    color: var(--cor0);
+    font-family: var(--fonte-androide);
+}
+
+main h2{
+    font-family: var(--fonte-androide);
+    color: var(--cor2);
+    font-size: 1.2em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor4), transparent); /* criar uma faixa degrade */
+    text-indent: 8px;
+}
+
+main p {
+    margin: 15px 0px;               /* margens do paragrafo */
+    text-align: justify;            /* formatar alinhamento do texto */
+    text-indent: 30px;              /* recuo de paragrafo */
+    font-size: 1.1em;               /* tamanho da fonte */
+    line-height: 1.5em;             /* espaçamento entre linhas */
+
+}
+
+main strong{
+    color: var(--cor1);             /* cor do que estiver dentro de strong */
+    padding: 2px 6px;               /* posicionamento da palavra dentro da caixa */
+
+}
+
+main a {
+    text-decoration: none;          /* retira a linha abaixo do link */
+    font-weight: bold;              /* fonte em negrito */
+    background-color: var(--cor5);  /* cor de fundo do link */
+    color: var(--cor1);
+    padding: 2px 6px;
+
+}
+main a:hover {                      /* acressenta uma linha e cor ao passar o mause por cima */
+    text-decoration: underline;
+    color: var(--cor0);
+}
+
+main img{
+    width: 100%;
+}
+
+main img.pequeno{       /* criar uma classe chamada 'pequena' */
+    max-width: 350px;   /* diminuir a img */ 
+    display: block;     /* trasnformar a img em bloco */
+    margin: auto;       /* centralizar a img */
+}
+
+div.video {             /* class video - config o video para ficar centralizado na pag*/
+    background-color: var(--cor1);   
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+aside {                 /* caixa da lista */
+    background-color: var(--cor5);
+    padding: 10px;
+    border-radius: 10px; /* arredondar as pontas da caixa */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.178);   /* sombra */
+    
+}
+
+aside > h3{
+    background-color: var(--cor2);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;      /* magem negativa */
+    border-radius: 10px 10px 0px 0px;
+}
+aside > ul {                            /* lista que está dentro da caixa */
+    list-style-position: inside;        /* posição dos marcadores da lista (inside=para dentro da caixa) */
+    columns: 2;                         /* número de colunas */
+    list-style-type: '\2714\00A0\00A0'; /* tipo de icone de lista( \2714\ é o check, o \00A0 é referente a um espaçãmento) */
+    
+}
+aside > ul > li > abbr{
+    text-decoration: none;
+}
+footer{
+    background-color: var(--cor0);
+    color: var(--cor5);
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+}
